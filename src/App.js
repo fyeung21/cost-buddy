@@ -2,9 +2,9 @@ import React from 'react';
 import "./reset.css";
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div>
       <h1>cost buddy</h1>
     </div>
   );
