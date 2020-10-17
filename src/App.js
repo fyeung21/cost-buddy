@@ -1,12 +1,13 @@
 import React from 'react';
 import "./reset.css";
 import './App.css';
+import Logo from './components/Logo/Logo';
 import ItemCard from './components/ItemCard/ItemCard';
 
 const App = () => {
   return (
     <div>
-      <h1>cost buddy</h1>
+      <Logo/>
       <div>
         <ItemCard />
       </div>
