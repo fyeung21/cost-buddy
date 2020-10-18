@@ -2,7 +2,7 @@ html {
   background-image: linear-gradient(to right top, #d7dde8, #bdc5d4, #a4adc0, #8c96ad, #757f9a);
   background-repeat: no-repeat;
   height: 100%;
-  color: #fff;
+  color: #000;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Roboto:wght@500&display=swap");
