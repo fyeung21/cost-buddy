@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../../globalStyles";
-
 import CardLabels from "./CardLabels";
 
 export const CardCont = styled.div`
