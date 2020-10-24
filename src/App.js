@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import "./reset.css";
 import './App.css';
 import Logo from './components/Logo/Logo';
@@ -11,7 +11,7 @@ const App = () => {
     e.preventDefault();
         setItems([
             ...items,
-            { id: Math.random() * 1000 }
+            { id: items.length }
         ]);
   }
 
