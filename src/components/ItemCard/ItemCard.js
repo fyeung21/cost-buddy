@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { theme, DeleteBtn } from "../../globalStyles";
 import CardLabels from "./CardLabels";
 import TrashBin from "../Icons/TrashBin";
 
-export const CardCont = styled.div`
-    width: 1000px;
-    margin: 0 auto;
+export const ItemCont = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 `
 export const Display = styled.div`
     display: flex;
@@ -18,6 +21,13 @@ export const Display = styled.div`
 export const Column = styled.div`
     width: 300px;
 `
+export const ItemNum = styled.p`
+    color: ${theme.headingFontColor};
+    font-family: ${theme.headingFont};
+    font-size: ${theme.h1FontSize};
+    font-weight: 800;
+    margin: 1rem 0.5rem;
+`
 
 const ItemCard = ({item, items, setItems}) => {
 
@@ -28,9 +38,9 @@ const ItemCard = ({item, items, setItems}) => {
     const ItemCardId = item.id + 1;
 
     return (
-        <div>
-            <p>{ItemCardId}</p>
-            <CardCont>
+        <ItemCont>
+            <ItemNum>{ItemCardId}</ItemNum>
+            <div>
                 <CardLabels/>
                 <Display>
                     <Column>
@@ -48,12 +58,12 @@ const ItemCard = ({item, items, setItems}) => {
                         <p>{"split amount based on total and number of checkboxes checked. Need to round up."}</p>
                     </Column>
                 </Display>
-            </CardCont>
+            </div>
 
-            <button onClick={deleteItemHandler}>
+            <DeleteBtn onClick={deleteItemHandler}>
                 <TrashBin/>
-            </button>
-        </div>
+            </DeleteBtn>
+        </ItemCont>
     )
 }
 

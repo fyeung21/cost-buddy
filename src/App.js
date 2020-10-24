@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./reset.css";
 import './App.css';
+import { MainCont, AddBtn } from "./globalStyles";
 import Logo from './components/Logo/Logo';
 import ItemList from './components/ItemList/ItemList';
 
@@ -16,16 +17,18 @@ const App = () => {
   }
 
   return (
-    <div>
+    <>
       <Logo/>
-      <div>
+      <MainCont>
         <ItemList
           items={items}
           setItems={setItems}
         />
-      </div>
-        <button onClick={addItemHandler}>click here to add</button>
-    </div>
+        <AddBtn onClick={addItemHandler}>
+          Add new item
+        </AddBtn>
+      </MainCont>
+    </>
   );
 }
 

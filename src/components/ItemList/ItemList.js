@@ -1,9 +1,16 @@
 import React from "react";
 import ItemCard from "../ItemCard/ItemCard";
 
+import styled from "styled-components";
+
+export const ListCont = styled.div`
+    width: 1000px;
+    margin: 0 auto;
+`
+
 const ItemList = ({items, setItems}) => {
     return (
-        <div>
+        <ListCont>
             <ul>
                 {items.map((item) => (
                     <ItemCard
@@ -14,7 +21,7 @@ const ItemList = ({items, setItems}) => {
                     />
                 ))}
             </ul>
-        </div>
+        </ListCont>
     )
 };
 
