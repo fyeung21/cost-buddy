@@ -28,7 +28,7 @@ export const AddBtn = styled.div`
     border-radius: 20px;
     padding: 0.5rem;
     width: 100px;
-    margin: 1rem 0;
+    margin: 1rem 2.25rem;
 `
 export const DeleteBtn = styled.div`
     background-color: #fff;
@@ -38,6 +38,5 @@ export const DeleteBtn = styled.div`
     border: 3px solid ${theme.primaryColor};
     border-radius: 20px;
     padding: 0.5rem;
-    width: 100px;
-    margin: 1rem;
+    margin: 0 0.5rem;
 `
