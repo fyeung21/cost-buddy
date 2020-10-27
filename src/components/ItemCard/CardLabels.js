@@ -9,7 +9,7 @@ export const LabelCont = styled.div`
     padding: 2rem 2rem 1rem;
 `
 export const LabelTxt = styled.h1`
-    color: ${theme.bodyFontColor};
+    color: ${theme.headingFontColor};
     font-family: ${theme.bodyFont};
     font-size: ${theme.bodyFontSize};
     font-weight: 800;

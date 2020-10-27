@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { theme, DeleteBtn } from "../../globalStyles";
+import { theme, DeleteBtn, Txt } from "../../globalStyles";
 import CardLabels from "./CardLabels";
 import TrashBin from "../Icons/TrashBin";
 
@@ -44,18 +44,18 @@ const ItemCard = ({item, items, setItems}) => {
                 <CardLabels/>
                 <Display>
                     <Column>
-                        <h1>{"description inline"}</h1>
-                        <p>${" price"}</p>
+                        <Txt>{"description inline"}</Txt>
+                        <Txt>${" price"}</Txt>
                     </Column>
 
                     <Column>
-                        <p>name with checkbox</p>
-                        <p>name with checkbox</p>
-                        <p>name with checkbox</p>
+                        <Txt>name with checkbox</Txt>
+                        <Txt>name with checkbox</Txt>
+                        <Txt>name with checkbox</Txt>
                     </Column>
 
                     <Column>
-                        <p>{"split amount based on total and number of checkboxes checked. Need to round up."}</p>
+                        <Txt>{"split amount based on total and number of checkboxes checked. Need to round up."}</Txt>
                     </Column>
                 </Display>
             </div>

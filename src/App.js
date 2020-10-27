@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./reset.css";
 import './App.css';
-import { MainCont, AddBtn } from "./globalStyles";
+import { MainCont, AddBtn, Txt } from "./globalStyles";
 import Logo from './components/Logo/Logo';
 import ItemList from './components/ItemList/ItemList';
 
@@ -25,7 +25,7 @@ const App = () => {
           setItems={setItems}
         />
         <AddBtn onClick={addItemHandler}>
-          Add new item
+          <Txt>Add new item</Txt>
         </AddBtn>
       </MainCont>
     </>

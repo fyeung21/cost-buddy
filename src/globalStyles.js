@@ -3,12 +3,13 @@ import styled from "styled-components";
 export const theme = {
     headingFont: `"Comfortaa", cursive`,
     bodyFont: `"Roboto", sans-serif`,
-    bodyFontColor: "#FFF",
+    bodyFontColor: "#141414",
     headingFontColor: "#FFF",
     primaryColor: "#FFF",
     buttonColor: "#50BDB4",
     h1FontSize: "3.5rem",
     h2FontSize: "2rem",
+    bodyFontSize: "18px",
     skinnyWindowSize: "414px",
     tabletSize: "768px",
     smallLaptopSize: "1024px",
@@ -26,8 +27,8 @@ export const AddBtn = styled.div`
     box-shadow: none;
     border: 3px solid ${theme.primaryColor};
     border-radius: 20px;
-    padding: 0.5rem;
-    width: 100px;
+    padding: 1rem;
+    width: 115px;
     margin: 1rem 2.25rem;
 `
 export const DeleteBtn = styled.div`
@@ -39,4 +40,11 @@ export const DeleteBtn = styled.div`
     border-radius: 20px;
     padding: 0.5rem;
     margin: 0 0.5rem;
+`
+export const Txt = styled.p`
+    font-family: ${theme.bodyFont};
+    font-size: ${theme.bodyFontSize};
+    color: ${theme.bodyFontColor};
+    font-weight: 400;
+    line-height: 22px;
 `
