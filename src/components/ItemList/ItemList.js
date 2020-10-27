@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 export const ListCont = styled.div`
     width: 1000px;
-    margin: 0 auto;
+    margin: 3rem auto;
 `
 
 const ItemList = ({items, setItems}) => {
