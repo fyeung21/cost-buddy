@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { DeleteBtn, Txt } from "../../globalStyles";
 import { ItemCont, Display, Column, ItemNum } from "./itemCardStyles";
 import CardLabels from "./CardLabels";
 import TrashBin from "../Icons/TrashBin";
+import InlineEdit from "../InlineEdit/InlineEdit";
+
 
 const ItemCard = ({item, items, setItems}) => {
+
+    const inputRef = useRef();
+    const textareaRef = useRef();
+
+    const [task, setTask] = useState("");
+    const [description, setDescription] = useState("");
 
     const deleteItemHandler = () => {
         setItems(items.filter(el => el.id !== item.id));
@@ -19,8 +27,39 @@ const ItemCard = ({item, items, setItems}) => {
                 <CardLabels/>
                 <Display>
                     <Column>
-                        <Txt>{"description inline"}</Txt>
-                        <Txt>${" price"}</Txt>
+                        <InlineEdit
+                            text={description}
+                            placeholder="Description"
+                            childRef={textareaRef}
+                            type="input"
+                            >
+                            <textarea
+                                ref={textareaRef}
+                                name="description"
+                                placeholder="Description"
+                                rows="3"
+                                value={description}
+                                onChange={e => setDescription(e.target.value)}
+                        />
+                        </InlineEdit>
+                        <div>
+                            <Txt>{"$"}</Txt>
+                            <InlineEdit
+                                text={task}
+                                placeholder="Price"
+                                childRef={inputRef}
+                                type="input"
+                            >  
+                            <input
+                                ref={inputRef}
+                                type="text"
+                                name="task"
+                                placeholder="Price"
+                                value={task}
+                                onChange={e => setTask(e.target.value)}
+                            />
+                        </InlineEdit>
+                        </div>
                     </Column>
 
                     <Column>
