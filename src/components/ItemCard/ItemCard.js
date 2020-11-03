@@ -1,9 +1,11 @@
 import React from "react";
-import { DeleteBtn, Txt } from "../../globalStyles";
+import { DeleteBtn } from "../../globalStyles";
 import { ItemCont, Display, Column, ItemNum } from "./itemCardStyles";
 import CardLabels from "./CardLabels";
 import TrashBin from "../Icons/TrashBin";
 import ItemDescription from "./ItemDescription";
+import SelectNames from "./SelectNames";
+import SplitAmount from "./SplitAmount";
 
 
 const ItemCard = ({item, items, setItems}) => {
@@ -25,13 +27,11 @@ const ItemCard = ({item, items, setItems}) => {
                     </Column>
 
                     <Column>
-                        <Txt>name with checkbox</Txt>
-                        <Txt>name with checkbox</Txt>
-                        <Txt>name with checkbox</Txt>
+                        <SelectNames/>
                     </Column>
 
                     <Column>
-                        <Txt>{"split amount based on total and number of checkboxes checked. Need to round up."}</Txt>
+                        <SplitAmount/>
                     </Column>
                 </Display>
             </div>
