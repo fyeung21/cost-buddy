@@ -3,7 +3,7 @@ import { DeleteBtn } from "../../globalStyles";
 import { ItemCont, Display, Column, ItemNum } from "./itemCardStyles";
 import CardLabels from "./CardLabels";
 import TrashBin from "../Icons/TrashBin";
-import ItemDescription from "./ItemDescription";
+import Description from "./Description";
 import SelectNames from "./SelectNames";
 import SplitAmount from "./SplitAmount";
 
@@ -23,7 +23,7 @@ const ItemCard = ({item, items, setItems}) => {
                 <CardLabels/>
                 <Display>
                     <Column>
-                        <ItemDescription/>
+                        <Description/>
                     </Column>
 
                     <Column>

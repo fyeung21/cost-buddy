@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Txt } from "../../globalStyles";
 import InlineEdit from "../InlineEdit/InlineEdit";
 
-const ItemDescription = () => {
+const Description = () => {
     const inputRef = useRef();
     const textareaRef = useRef();
 
@@ -48,4 +48,4 @@ const ItemDescription = () => {
 
 };
 
-export default ItemDescription;
+export default Description;
