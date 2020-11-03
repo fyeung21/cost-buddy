@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Txt } from "../../globalStyles";
 
 
 const InlineEdit = ({ text, type, placeholder, children, childRef, ...props }) => {
@@ -40,9 +41,9 @@ const InlineEdit = ({ text, type, placeholder, children, childRef, ...props }) =
         <div
           onClick={() => setEditing(true)}
         >
-          <span>
+          <Txt>
             {text || placeholder || "Editable content"}
-          </span>
+          </Txt>
         </div>
       )}
     </section>

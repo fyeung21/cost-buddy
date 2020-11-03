@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Txt } from "../../globalStyles";
 import InlineEdit from "../InlineEdit/InlineEdit";
+import { Flex, InputTxt, DollarSign } from "./itemCardStyles";
 
 const Description = () => {
     const inputRef = useRef();
@@ -17,7 +18,7 @@ const Description = () => {
                 childRef={textareaRef}
                 type="input"
                 >
-                <input
+                <InputTxt
                     ref={textareaRef}
                     name="description"
                     placeholder="Description"
@@ -25,15 +26,15 @@ const Description = () => {
                     onChange={e => setDescription(e.target.value)}
             />
             </InlineEdit>
-            <div>
-                <Txt>{"$"}</Txt>
+            <Flex>
+                <DollarSign>{"$"}</DollarSign>
                 <InlineEdit
                     text={task}
                     placeholder="Price"
                     childRef={inputRef}
                     type="input"
                 >  
-                <input
+                <InputTxt
                     ref={inputRef}
                     type="text"
                     name="task"
@@ -42,7 +43,7 @@ const Description = () => {
                     onChange={e => setTask(e.target.value)}
                 />
             </InlineEdit>
-            </div>
+            </Flex>
         </>
     )
 

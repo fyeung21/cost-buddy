@@ -43,3 +43,26 @@ export const LabelTxt = styled.h1`
     font-weight: 800;
     text-transform: capitalize;
 `
+
+//////////// Description
+
+export const Flex = styled.div`
+    display: flex;
+    flex-direction: row;
+    margin: 0.25rem 0;
+`
+export const InputTxt = styled.input`
+    font-family: ${theme.bodyFont};
+    font-size: ${theme.bodyFontSize};
+    color: ${theme.bodyFontColor};
+    font-weight: 400;
+    line-height: 22px;
+`
+export const DollarSign = styled.p`
+    font-family: ${theme.bodyFont};
+    font-size: ${theme.bodyFontSize};
+    color: ${theme.bodyFontColor};
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0 0.25rem 0 0;
+`
