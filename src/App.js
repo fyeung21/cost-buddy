@@ -4,6 +4,7 @@ import './App.css';
 import { MainCont, AddBtn, Txt } from "./globalStyles";
 import Logo from './components/Logo/Logo';
 import ItemList from './components/ItemList/ItemList';
+import TotalCard from './components/TotalCard/TotalCard';
 
 const App = () => {
   const [items, setItems] = useState([]);
@@ -20,6 +21,7 @@ const App = () => {
     <>
       <Logo/>
       <MainCont>
+        <TotalCard/>
         <ItemList
           items={items}
           setItems={setItems}
