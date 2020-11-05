@@ -1,12 +1,10 @@
 import React, { useState, useRef } from "react";
 import InlineEdit from "../InlineEdit/InlineEdit";
-import { Flex, InputTxt, DollarSign } from "../ItemCard/itemCardStyles";
+import { InputTxt} from "../ItemCard/itemCardStyles";
 
 const NameList = () => {
-    const inputRef = useRef();
-    const textareaRef = useRef();
+    const nameRef = useRef();
 
-    const [task, setTask] = useState("");
     const [name, setName] = useState("");
 
     return (
@@ -14,35 +12,17 @@ const NameList = () => {
             <InlineEdit
                 text={name}
                 placeholder="Name"
-                childRef={textareaRef}
+                childRef={nameRef}
                 type="input"
                 >
                 <InputTxt
-                    ref={textareaRef}
+                    ref={nameRef}
                     name="name"
                     placeholder="Name"
                     value={name}
                     onChange={e => setName(e.target.value)}
             />
             </InlineEdit>
-            <Flex>
-                <DollarSign>{"$"}</DollarSign>
-                <InlineEdit
-                    text={task}
-                    placeholder="Price"
-                    childRef={inputRef}
-                    type="input"
-                >  
-                <InputTxt
-                    ref={inputRef}
-                    type="text"
-                    name="task"
-                    placeholder="Price"
-                    value={task}
-                    onChange={e => setTask(e.target.value)}
-                />
-            </InlineEdit>
-            </Flex>
         </>
     )
 

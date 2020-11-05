@@ -8,6 +8,7 @@ import TotalCard from './components/TotalCard/TotalCard';
 
 const App = () => {
   const [items, setItems] = useState([]);
+  const [names, setNames] = useState([]);
 
   const addItemHandler = (e) => {
     e.preventDefault();
@@ -16,12 +17,26 @@ const App = () => {
             { id: items.length }
         ]);
   }
+  const addNameHandler = (e) => {
+    e.preventDefault();
+        setNames([
+            ...names,
+            { id: names.length }
+        ]);
+  }
 
   return (
     <>
       <Logo/>
       <MainCont>
-        <TotalCard/>
+        <TotalCard
+          names={names}
+          setItems={setItems}
+        />
+        <AddBtn onClick={addNameHandler}>
+          <Txt>Add new name</Txt>
+        </AddBtn>
+
         <ItemList
           items={items}
           setItems={setItems}
