@@ -48,3 +48,18 @@ export const Txt = styled.p`
     font-weight: 400;
     line-height: 22px;
 `
+export const InputTxt = styled.input`
+    font-family: ${theme.bodyFont};
+    font-size: ${theme.bodyFontSize};
+    color: ${theme.bodyFontColor};
+    font-weight: 400;
+    line-height: 22px;
+`
+export const DollarSign = styled.p`
+    font-family: ${theme.bodyFont};
+    font-size: ${theme.bodyFontSize};
+    color: ${theme.bodyFontColor};
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0 0.25rem 0 0;
+`

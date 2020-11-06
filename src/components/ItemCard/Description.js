@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
-import { Txt } from "../../globalStyles";
+import { InputTxt, DollarSign } from "../../globalStyles";
 import InlineEdit from "../InlineEdit/InlineEdit";
-import { Flex, InputTxt, DollarSign } from "./itemCardStyles";
+import { Flex } from "./itemCardStyles";
 
 const Description = () => {
     const inputRef = useRef();

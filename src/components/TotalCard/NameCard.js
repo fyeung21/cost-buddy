@@ -1,10 +1,10 @@
 import React, { useState, useRef } from "react";
-import { DeleteBtn } from "../../globalStyles";
-import { InputTxt, Flex} from "../ItemCard/itemCardStyles";
+import { DeleteBtn, InputTxt, DollarSign, Txt } from "../../globalStyles";
+import { NameCardCont, Flex } from "./totalCardStyles";
 import InlineEdit from "../InlineEdit/InlineEdit";
 import TrashBin from "../Icons/TrashBin";
 
-const NameList = ({ single, names, setNames }) => {
+const NameCard = ({ single, names, setNames }) => {
     const nameRef = useRef();
 
     const [nameInput, setNameInput] = useState("");
@@ -14,7 +14,7 @@ const NameList = ({ single, names, setNames }) => {
     };
 
     return (
-        <Flex>
+        <NameCardCont>
             <InlineEdit
                 text={nameInput}
                 placeholder="Name"
@@ -29,12 +29,18 @@ const NameList = ({ single, names, setNames }) => {
                     onChange={e => setNameInput(e.target.value)}
                 />
             </InlineEdit>
+
+            <Flex>
+                <DollarSign>{"$"}</DollarSign>
+                <Txt>{"240"}</Txt>
+            </Flex>
+
             <DeleteBtn onClick={deleteNameHandler}>
                 <TrashBin/>
             </DeleteBtn>
-        </Flex>
+        </NameCardCont>
     )
 
 };
 
-export default NameList;
+export default NameCard;

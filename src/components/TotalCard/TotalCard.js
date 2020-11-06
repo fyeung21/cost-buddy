@@ -1,6 +1,6 @@
 import React from "react";
 import { DisplayCard, Container } from "../TotalCard/totalCardStyles";
-import NameList from "./NameList";
+import NameCard from "./NameCard";
 
 const TotalCard = ({names, setNames}) => {
 
@@ -9,7 +9,7 @@ const TotalCard = ({names, setNames}) => {
             <Container>
             <ul>
                 {names.map((single) => (
-                    <NameList
+                    <NameCard
                         key={single.id}
                         single={single}
                         names={names}
