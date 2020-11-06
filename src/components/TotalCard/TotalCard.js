@@ -8,10 +8,10 @@ const TotalCard = ({names, setNames}) => {
         <DisplayCard>
             <Container>
             <ul>
-                {names.map((name) => (
+                {names.map((single) => (
                     <NameList
-                        key={name.id}
-                        name={name}
+                        key={single.id}
+                        single={single}
                         names={names}
                         setNames={setNames}
                     />

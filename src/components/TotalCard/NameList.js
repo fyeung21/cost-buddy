@@ -1,16 +1,22 @@
 import React, { useState, useRef } from "react";
+import { DeleteBtn } from "../../globalStyles";
+import { InputTxt, Flex} from "../ItemCard/itemCardStyles";
 import InlineEdit from "../InlineEdit/InlineEdit";
-import { InputTxt} from "../ItemCard/itemCardStyles";
+import TrashBin from "../Icons/TrashBin";
 
-const NameList = () => {
+const NameList = ({ single, names, setNames }) => {
     const nameRef = useRef();
 
-    const [name, setName] = useState("");
+    const [nameInput, setNameInput] = useState("");
+
+    const deleteNameHandler = () => {
+        setNames(names.filter(el => el.id !== single.id));
+    };
 
     return (
-        <>
+        <Flex>
             <InlineEdit
-                text={name}
+                text={nameInput}
                 placeholder="Name"
                 childRef={nameRef}
                 type="input"
@@ -19,11 +25,14 @@ const NameList = () => {
                     ref={nameRef}
                     name="name"
                     placeholder="Name"
-                    value={name}
-                    onChange={e => setName(e.target.value)}
-            />
+                    value={nameInput}
+                    onChange={e => setNameInput(e.target.value)}
+                />
             </InlineEdit>
-        </>
+            <DeleteBtn onClick={deleteNameHandler}>
+                <TrashBin/>
+            </DeleteBtn>
+        </Flex>
     )
 
 };

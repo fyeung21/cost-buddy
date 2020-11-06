@@ -14,14 +14,14 @@ const App = () => {
     e.preventDefault();
         setItems([
             ...items,
-            { id: items.length }
+            { id: Math.random() * 1000 }
         ]);
   }
   const addNameHandler = (e) => {
     e.preventDefault();
         setNames([
             ...names,
-            { id: names.length }
+            { id: Math.random() * 1000 }
         ]);
   }
 
@@ -31,7 +31,7 @@ const App = () => {
       <MainCont>
         <TotalCard
           names={names}
-          setItems={setItems}
+          setNames={setNames}
         />
         <AddBtn onClick={addNameHandler}>
           <Txt>Add new name</Txt>
