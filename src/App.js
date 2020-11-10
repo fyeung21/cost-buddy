@@ -9,18 +9,12 @@ import TotalCard from './components/TotalCard/TotalCard';
 const App = () => {
   const [items, setItems] = useState([]);
   const [names, setNames] = useState([]);
+  const [splitAmounts, setSplitAmounts] = useState([]);
 
   const addItemHandler = (e) => {
     e.preventDefault();
         setItems([
             ...items,
-            { id: Math.random() * 1000 }
-        ]);
-  }
-  const addNameHandler = (e) => {
-    e.preventDefault();
-        setNames([
-            ...names,
             { id: Math.random() * 1000 }
         ]);
   }
@@ -32,10 +26,9 @@ const App = () => {
         <TotalCard
           names={names}
           setNames={setNames}
+          splitAmounts={splitAmounts}
+          setSplitAmounts={setSplitAmounts}
         />
-        <AddBtn onClick={addNameHandler}>
-          <Txt>Add new name</Txt>
-        </AddBtn>
 
         <ItemList
           items={items}
