@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { DisplayCard, Container } from "../TotalCard/totalCardStyles";
+import { TotalCardCont, DisplayCard, Container } from "../TotalCard/totalCardStyles";
 import NameCard from "./NameCard";
-import NameForm from "./NameForm"
+import NameForm from "./NameForm";
+import TotalCardLabels from "./TotalCardLabels";
 
 const TotalCard = ({names, setNames, splitAmounts, setSplitAmounts}) => {
     const [inputText, setInputText] = useState("");
 
     return (
+        <TotalCardCont>
+        <TotalCardLabels/>
         <DisplayCard>
             <Container>
                 <NameForm
@@ -33,6 +36,7 @@ const TotalCard = ({names, setNames, splitAmounts, setSplitAmounts}) => {
             </ul>
             </Container>
         </DisplayCard>
+        </TotalCardCont>
     )
 
 };
