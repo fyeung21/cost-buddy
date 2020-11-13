@@ -6,8 +6,8 @@ export const theme = {
     bodyFontColor: "#141414",
     headingFontColor: "#FFF",
     primaryColor: "#FFF",
-    buttonColor: "#50BDB4",
-    hoverColor: "#677BA0",
+    beforeHoverColor: "darkgrey",
+    hoverColor: "#0080FE",
     h1FontSize: "3.5rem",
     h2FontSize: "2rem",
     bodyFontSize: "18px",
@@ -33,14 +33,15 @@ export const AddBtn = styled.div`
     margin: 1rem 2.25rem;
 `
 export const DeleteBtn = styled.div`
-    background-color: #fff;
+    background-color: transparent;
     cursor: pointer;
     outline: none;
-    box-shadow: none;
-    border: 3px solid ${theme.primaryColor};
-    border-radius: 20px;
-    padding: 0.5rem;
-    margin: 0 0.5rem;
+    color: ${theme.beforeHoverColor};
+    margin: 0.5rem;
+
+    :hover {
+        color: red;
+    }
 `
 export const Txt = styled.p`
     font-family: ${theme.bodyFont};

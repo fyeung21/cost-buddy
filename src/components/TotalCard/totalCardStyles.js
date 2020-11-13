@@ -9,7 +9,7 @@ export const TotalCardCont = styled.div`
 export const DisplayCard = styled.div`
     background-color: #fff;
     border-radius: 20px;
-    padding: 2rem;
+    padding: 1rem 2rem;
     margin: 0 auto;
 `
 export const Container = styled.div`
@@ -42,7 +42,7 @@ export const NameInput = styled.input`
     cursor: pointer;
     outline: none;
     box-shadow: none;
-    border: 2px solid lightgrey;
+    border: 2px solid ${theme.beforeHoverColor};
 
     :hover {
         border: 2px solid ${theme.hoverColor};
@@ -55,12 +55,11 @@ export const AddNameBtn = styled.button`
     background-color: transparent;
     cursor: pointer;
     outline: none;
-    box-shadow: none;
-    border: 2px solid lightgrey;
+    border: 2px solid ${theme.beforeHoverColor};
     border-radius: 15px;
     margin: 0.5rem;
     padding: 0.25rem 0.5rem;
-    color: lightgrey;
+    color: ${theme.beforeHoverColor};
 
     :hover {
         border: 2px solid ${theme.hoverColor};
@@ -80,6 +79,7 @@ export const NameCardCont = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 0 0 0.5rem;
 `
 export const Flex = styled.div`
     display: flex;
