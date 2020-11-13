@@ -7,6 +7,7 @@ export const theme = {
     headingFontColor: "#FFF",
     primaryColor: "#FFF",
     buttonColor: "#50BDB4",
+    hoverColor: "#677BA0",
     h1FontSize: "3.5rem",
     h2FontSize: "2rem",
     bodyFontSize: "18px",

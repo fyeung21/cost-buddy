@@ -1,4 +1,5 @@
 import React from "react";
+import { NameInput, AddNameBtn, Form } from "./totalCardStyles";
 import AddUser from "../Icons/AddUser";
 
 const NameForm = ({setNames, names, inputText, setInputText, splitAmounts, setSplitAmounts}) => {
@@ -23,17 +24,20 @@ const NameForm = ({setNames, names, inputText, setInputText, splitAmounts, setSp
 
     return (
         <form>
-            <input
+            <Form>
+            <NameInput
                 value={inputText}
                 onChange={inputTextHandler}
                 type="text"
+                placeholder="Add new name"
             />
-            <button
+            <AddNameBtn
                 onClick={addNameHandler}
                 type="submit"
             >
-                <AddUser/>
-            </button>
+                    <AddUser/>
+            </AddNameBtn>
+        </Form>
         </form>
     )
 }
