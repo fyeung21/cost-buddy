@@ -18,7 +18,7 @@ const ItemCard = ({item, items, setItems}) => {
 
     return (
         <ItemCont>
-            <ItemNum>{ItemCardId}</ItemNum>
+            {/* <ItemNum>{ItemCardId}</ItemNum> */}
             <div>
                 <CardLabels/>
                 <Display>

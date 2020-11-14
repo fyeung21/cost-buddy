@@ -1,14 +1,22 @@
 import React from "react";
 import { Txt } from "../../globalStyles";
+import { NamesConsumer } from "../Context/namesContext";
 
 
 const SelectNames = () => {
     return (
-        <div>
-            <Txt>name with checkbox</Txt>
-            <Txt>name with checkbox</Txt>
-            <Txt>name with checkbox</Txt>
-        </div>
+    
+            <NamesConsumer>
+                { (nameList) => {
+                    return (
+                        <Txt> 
+                            Hello {nameList} 
+                        </Txt>
+                    )
+                }
+                }
+            </NamesConsumer>
+        
     )
 };
 

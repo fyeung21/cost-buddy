@@ -5,6 +5,7 @@ import { MainCont, AddBtn, Txt } from "./globalStyles";
 import Logo from './components/Logo/Logo';
 import ItemList from './components/ItemList/ItemList';
 import TotalCard from './components/TotalCard/TotalCard';
+import { NamesProvider } from './components/Context/namesContext';
 
 const App = () => {
   const [items, setItems] = useState([]);
@@ -23,20 +24,22 @@ const App = () => {
     <>
       <Logo/>
       <MainCont>
-        <TotalCard
-          names={names}
-          setNames={setNames}
-          splitAmounts={splitAmounts}
-          setSplitAmounts={setSplitAmounts}
-        />
+        <NamesProvider value="TESTTTTTTT">
+          <TotalCard
+            names={names}
+            setNames={setNames}
+            splitAmounts={splitAmounts}
+            setSplitAmounts={setSplitAmounts}
+          />
 
-        <ItemList
-          items={items}
-          setItems={setItems}
-        />
-        <AddBtn onClick={addItemHandler}>
-          <Txt>Add new item</Txt>
-        </AddBtn>
+          <ItemList
+            items={items}
+            setItems={setItems}
+          />
+          <AddBtn onClick={addItemHandler}>
+            <Txt>Add new item</Txt>
+          </AddBtn>
+        </NamesProvider>
       </MainCont>
     </>
   );
