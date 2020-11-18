@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cost-buddy/static/css/main.8f86c898.chunk.css",
+    "main.js": "/cost-buddy/static/js/main.fc852389.chunk.js",
+    "main.js.map": "/cost-buddy/static/js/main.fc852389.chunk.js.map",
+    "runtime-main.js": "/cost-buddy/static/js/runtime-main.a68f021f.js",
+    "runtime-main.js.map": "/cost-buddy/static/js/runtime-main.a68f021f.js.map",
+    "static/js/2.48808913.chunk.js": "/cost-buddy/static/js/2.48808913.chunk.js",
+    "static/js/2.48808913.chunk.js.map": "/cost-buddy/static/js/2.48808913.chunk.js.map",
+    "index.html": "/cost-buddy/index.html",
+    "precache-manifest.f134187661d1077f952365689dd6b0fa.js": "/cost-buddy/precache-manifest.f134187661d1077f952365689dd6b0fa.js",
+    "service-worker.js": "/cost-buddy/service-worker.js",
+    "static/css/main.8f86c898.chunk.css.map": "/cost-buddy/static/css/main.8f86c898.chunk.css.map",
+    "static/js/2.48808913.chunk.js.LICENSE.txt": "/cost-buddy/static/js/2.48808913.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a68f021f.js",
+    "static/js/2.48808913.chunk.js",
+    "static/css/main.8f86c898.chunk.css",
+    "static/js/main.fc852389.chunk.js"
+  ]
+}
